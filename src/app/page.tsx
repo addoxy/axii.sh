@@ -1,8 +1,8 @@
 import HeroLogo from "@/components/HeroLogo";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
                 </span>{" "}
                 websites with a focus on seamless user experiences. I can also
                 help you leverage the power of{" "}
-                <span className="text-primary">Notion</span> to boost your
+                <span className="text-primary">Notion</span> to boost your{" "}
                 <span className="text-primary">productivity</span>.
               </p>
             </div>
@@ -50,6 +50,11 @@ export default function Home() {
             <HeroLogo icon="tailwind" />
             <HeroLogo icon="notion" />
           </div>
+        </MaxWidthWrapper>
+      </section>
+      <section>
+        <MaxWidthWrapper className="flex flex-col">
+          <div></div>
         </MaxWidthWrapper>
       </section>
     </main>
