@@ -28,6 +28,7 @@ const config = {
         foreground: "hsl(var(--foreground))",
         border: "hsl(var(--border))",
         "primary-hover": "hsl(var(--primary-hover))",
+        cta: "hsl(var(--cta))",
       },
       keyframes: {
         "accordion-down": {

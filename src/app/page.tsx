@@ -2,6 +2,7 @@ import HeroLogo from "@/components/HeroLogo";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -24,12 +25,24 @@ export default function Home() {
                 <span className="text-primary">productivity</span>.
               </p>
             </div>
-            <Button
-              asChild
-              className="text-background bg-primary text-xl font-bold rounded-md h-12 px-4"
-            >
-              <Link href="#contact-me">Contact me</Link>
-            </Button>
+            <div className="flex gap-3">
+              <Button
+                asChild
+                className="text-background bg-primary text-xl font-bold rounded-md h-12 px-4 w-fit"
+              >
+                <Link href="#contact-me">Contact me</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="text-cta border-cta bg-background text-xl font-bold rounded-md h-12 px-4 w-fit gap-3 hover:bg-cta hover:text-background"
+              >
+                <Link href="#contact-me" className="flex items-center gap-3">
+                  View Projects
+                  <ArrowRight className="size-6" />
+                </Link>
+              </Button>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-7 shrink-0">
             <HeroLogo icon="react" />
