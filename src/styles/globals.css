@@ -4,6 +4,12 @@
 
 @layer base {
   :root {
-    --background: #121212;
+    --background: 0 0% 7%;
+    --foreground: 240 5% 65%;
+
+    --primary: 0 0% 100%;
+    --primary-hover: 240 5% 84%;
+
+    --border: 0 0% 16%;
   }
 }
