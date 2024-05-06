@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mb-32">
       <section className="mt-20 sm:mt-32">
         <MaxWidthWrapper className="flex flex-col justify-between lg:flex-row lg:gap-28 xl:gap-32">
           <div className="flex flex-col justify-between">
