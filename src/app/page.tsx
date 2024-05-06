@@ -13,17 +13,14 @@ export default function Home() {
           <div className="flex flex-col justify-between">
             <div className="flex flex-col">
               <h1 className="mb-8 text-center text-4xl font-bold text-primary sm:text-5xl lg:text-left lg:text-4xl xl:text-5xl">
-                Web Developer, Designer & Notion Expert
+                Full-stack Web Developer & UI/UX Designer
               </h1>
               <p className="text-center text-base font-medium text-foreground sm:text-xl lg:text-left lg:text-lg xl:text-xl">
                 I build{" "}
                 <span className="text-primary">
                   beautiful, interactive and accessible
                 </span>{" "}
-                websites with a focus on seamless user experiences. I can also
-                help you leverage the power of{" "}
-                <span className="text-primary">Notion</span> to boost your{" "}
-                <span className="text-primary">productivity</span>.
+                websites with a focus on seamless user experiences.
               </p>
             </div>
             <div className="mx-auto mt-14 flex gap-3 lg:mx-0 lg:mt-0">
@@ -49,7 +46,7 @@ export default function Home() {
             <HeroLogo icon="react" />
             <HeroLogo icon="next" />
             <HeroLogo icon="tailwind" />
-            <HeroLogo icon="notion" />
+            <HeroLogo icon="figma" />
           </div>
         </MaxWidthWrapper>
       </section>

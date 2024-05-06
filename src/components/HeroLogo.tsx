@@ -1,25 +1,29 @@
 import { cn } from "@/utils/utils";
+import { FigmaIcon } from "lucide-react";
 
 type HeroLogoProps = {
-  icon: "react" | "next" | "tailwind" | "notion";
+  icon: "react" | "next" | "tailwind" | "figma" | "notion";
 };
 
 const HeroLogo = (props: HeroLogoProps) => {
   const { icon } = props;
 
   return (
-    <div className="flex size-20 items-center justify-center rounded-xl bg-primary sm:size-24 lg:size-32 xl:size-40">
+    <div className="flex size-20 items-center justify-center rounded-xl bg-primary sm:size-24 lg:size-32 xl:size-36">
       {icon === "react" ? (
-        <ReactLogo className="size-10 text-background sm:size-16 xl:size-24" />
+        <ReactLogo className="size-10 text-background sm:size-16 xl:size-20" />
       ) : null}
       {icon === "next" ? (
-        <NextLogo className="size-10 text-background sm:size-16 xl:size-24" />
+        <NextLogo className="size-10 text-background sm:size-16 xl:size-20" />
       ) : null}
       {icon === "tailwind" ? (
-        <TailwindLogo className="size-10 text-background sm:size-16 xl:size-24" />
+        <TailwindLogo className="size-10 text-background sm:size-16 xl:size-20" />
+      ) : null}
+      {icon === "figma" ? (
+        <FigmaIcon className="size-10 text-background sm:size-16 xl:size-20" />
       ) : null}
       {icon === "notion" ? (
-        <NotionLogo className="size-10 text-background sm:size-16 xl:size-24" />
+        <NotionLogo className="size-10 text-background sm:size-16 xl:size-20" />
       ) : null}
     </div>
   );
