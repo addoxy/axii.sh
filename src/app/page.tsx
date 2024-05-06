@@ -38,7 +38,7 @@ export default function Home() {
                 variant="outline"
                 className="h-12 w-fit gap-3 rounded-md border-cta bg-background px-4 text-xl font-semibold text-cta hover:bg-cta-hover/20"
               >
-                <Link href="#contact-me" className="flex items-center gap-3">
+                <Link href="#projects" className="flex items-center gap-3">
                   View Projects
                   <ArrowRight className="size-6" />
                 </Link>
