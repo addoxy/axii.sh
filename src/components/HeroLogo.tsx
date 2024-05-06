@@ -8,18 +8,18 @@ const HeroLogo = (props: HeroLogoProps) => {
   const { icon } = props;
 
   return (
-    <div className="flex size-40 items-center justify-center rounded-xl bg-primary">
+    <div className="flex size-20 items-center justify-center rounded-xl bg-primary sm:size-24 lg:size-32 xl:size-40">
       {icon === "react" ? (
-        <ReactLogo className="size-24 text-background" />
+        <ReactLogo className="size-10 text-background sm:size-16 xl:size-24" />
       ) : null}
       {icon === "next" ? (
-        <NextLogo className="size-24 text-background" />
+        <NextLogo className="size-10 text-background sm:size-16 xl:size-24" />
       ) : null}
       {icon === "tailwind" ? (
-        <TailwindLogo className="size-24 text-background" />
+        <TailwindLogo className="size-10 text-background sm:size-16 xl:size-24" />
       ) : null}
       {icon === "notion" ? (
-        <NotionLogo className="size-24 text-background" />
+        <NotionLogo className="size-10 text-background sm:size-16 xl:size-24" />
       ) : null}
     </div>
   );
