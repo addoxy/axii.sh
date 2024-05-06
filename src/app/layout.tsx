@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={cn(
-          "flex min-h-screen flex-col bg-background font-sans antialiased",
+          "relative flex min-h-screen flex-col bg-background font-sans antialiased",
           fontSans.variable,
           process.env.NODE_ENV === "development" && "debug-screens",
         )}

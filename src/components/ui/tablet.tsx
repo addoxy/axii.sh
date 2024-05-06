@@ -11,7 +11,7 @@ const Tablet = (props: LaptopProps) => {
     <div className="bg-tablet shrink-0 rounded-xl p-3 shadow-lg shadow-background lg:max-w-[400px] xl:max-w-[512px]">
       <Image
         src={imagePath}
-        className="relative w-full rounded-lg"
+        className="w-full rounded-lg"
         alt="laptop"
         width={1280}
         height={832}

@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between border-b border-border py-8 text-xl font-bold text-primary">
+    <nav className="sticky top-0 flex items-center justify-between border-b border-border bg-background py-8 text-xl font-bold text-primary">
       <MaxWidthWrapper className="flex justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-4">
