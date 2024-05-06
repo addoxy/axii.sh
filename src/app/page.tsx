@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section className="mt-52">
+      <section id="projects" className="mt-52">
         <MaxWidthWrapper className="flex flex-col">
           <h2 className="mb-16 text-center text-4xl font-bold text-primary sm:text-5xl lg:text-left lg:text-4xl xl:text-5xl">
             Projects
