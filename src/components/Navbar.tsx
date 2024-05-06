@@ -1,25 +1,25 @@
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 
 const Navbar = () => {
   return (
-    <nav className="py-8 font-bold text-xl flex justify-between items-center text-primary border-b border-border">
+    <nav className="flex items-center justify-between border-b border-border py-8 text-xl font-bold text-primary">
       <MaxWidthWrapper className="flex justify-between">
-        <div className="flex gap-6 items-center">
-          <Link href="/" className="flex gap-4 items-center">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="flex items-center gap-4">
             <Image src="/logo.png" alt="logo" width={40} height={40} />
             addoxy
           </Link>
         </div>
-        <div className="flex gap-8 items-center">
+        <div className="flex items-center gap-8">
           <NavItem text="Projects" href="#projects" />
           <NavItem text="Blog" href="/blog" />
           <NavItem text="Notion Templates" href="#notion-templates" />
           <Button
             asChild
-            className="text-background bg-primary text-xl font-bold rounded-md h-12 px-4"
+            className="h-12 rounded-md bg-primary px-4 text-xl font-bold text-background"
           >
             <Link href="#contact-me">Contact me</Link>
           </Button>
@@ -38,7 +38,7 @@ const NavItem = (props: NavItemProps) => {
   const { text, href } = props;
 
   return (
-    <Link href={href} className="hover:text-primary-hover transition-all">
+    <Link href={href} className="transition-all hover:text-primary-hover">
       {text}
     </Link>
   );

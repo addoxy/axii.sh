@@ -8,7 +8,7 @@ const HeroLogo = (props: HeroLogoProps) => {
   const { icon } = props;
 
   return (
-    <div className="size-40 bg-primary rounded-xl flex items-center justify-center">
+    <div className="flex size-40 items-center justify-center rounded-xl bg-primary">
       {icon === "react" ? (
         <ReactLogo className="size-24 text-background" />
       ) : null}
