@@ -12,6 +12,10 @@
     --primary: 0 0% 100%;
     --primary-hover: 240 5% 84%;
 
+    --card: 0 0% 9%;
+
+    --tablet: 0 0% 6%;
+
     --border: 0 0% 16%;
   }
 }

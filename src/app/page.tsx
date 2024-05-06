@@ -1,5 +1,6 @@
 import HeroLogo from "@/components/HeroLogo";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -52,9 +53,31 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section>
+      <section className="mt-52">
         <MaxWidthWrapper className="flex flex-col">
-          <div></div>
+          <h2 className="mb-16 text-center text-4xl font-bold text-primary sm:text-5xl lg:text-left lg:text-4xl xl:text-5xl">
+            Projects
+          </h2>
+          <div className="flex flex-col gap-10">
+            <ProjectCard
+              title="KanvaBoard"
+              description="A minimal project management app that lets you keep track of and sort your tasks using a drag and drop interface."
+              imagePath="/kanvaboard-lg.png"
+              href="https://github.com/addoxy/KanvaBoard"
+            />
+            <ProjectCard
+              title="Lumosent"
+              description="A habit tracker that offers effortless habit tracking, detailed statistics to figure out your strong and weak points, and starter kits to help you get started."
+              imagePath="/lumosent-lg.png"
+              href="https://github.com/addoxy/Lumosent"
+            />
+            <ProjectCard
+              title="CourseInsider"
+              description="A website to explore your college courses in a quick and convenient way. Find everything about a course at a unified location without juggling between different resources."
+              imagePath="/courseinsider-lg.png"
+              href="https://github.com/CarboxyDev/CourseInsider"
+            />
+          </div>
         </MaxWidthWrapper>
       </section>
     </main>

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
@@ -30,6 +31,8 @@ const config = {
         "primary-hover": "hsl(var(--primary-hover))",
         cta: "hsl(var(--cta))",
         "cta-hover": "hsl(var(--cta-hover))",
+        card: "hsl(var(--card))",
+        tablet: "hsl(var(--tablet))",
       },
       keyframes: {
         "accordion-down": {
