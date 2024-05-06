@@ -35,7 +35,7 @@ export default function Home() {
               <Button
                 asChild
                 variant="outline"
-                className="text-cta border-cta bg-background text-xl font-bold rounded-md h-12 px-4 w-fit gap-3 hover:bg-cta hover:text-background"
+                className="text-cta border-cta bg-background text-xl font-semibold rounded-md h-12 px-4 w-fit gap-3 hover:bg-cta-hover/20"
               >
                 <Link href="#contact-me" className="flex items-center gap-3">
                   View Projects
