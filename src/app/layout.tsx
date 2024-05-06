@@ -10,9 +10,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Addoxy - Web Developer, Designer & Notion Expert",
+  title: "Addoxy - Full-stack Web Developer & UI/UX Designer",
   description:
-    "I build beautiful, interactive and accessible websites with a focus on seamless user experiences. I can also help you leverage the power of Notion to boost your productivity.",
+    "I build beautiful, interactive and accessible websites with a focus on seamless user experiences. I also provide high quality Notion templates to boost your productivity.",
 };
 
 export default function RootLayout({
