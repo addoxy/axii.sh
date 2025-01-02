@@ -50,7 +50,9 @@ export const Navbar = () => {
           <MobileNavbar />
           <div className="flex items-center gap-6 max-lg:hidden">
             {links.map((link, i) => (
-              <NavLink href={link.href}>{link.name}</NavLink>
+              <NavLink key={i} href={link.href}>
+                {link.name}
+              </NavLink>
             ))}
 
             <a href="/files/Aditya_Kumar_Resume.pdf" download="Aditya_Kumar_Resume.pdf">
