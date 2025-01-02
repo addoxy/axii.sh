@@ -347,3 +347,15 @@ export const FigmaIcon = ({ className }: IconProps) => {
     </svg>
   );
 };
+
+export const MenuIcon = ({ className }: IconProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={cn('fill-current', className)}
+    >
+      <path fill="currentColor" d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
+    </svg>
+  );
+};

@@ -15,8 +15,13 @@ export interface ProjectProps {
 
 export const Project = ({ title, description, href, image, labels, orientation }: ProjectProps) => {
   return (
-    <div className="flex items-center gap-16">
-      <div className={cn('flex h-full flex-col', orientation === 'ltr' ? 'order-1' : 'order-2')}>
+    <div className="flex flex-col items-start gap-16 lg:flex-row lg:items-center">
+      <div
+        className={cn(
+          'flex h-full flex-col lg:w-1/2',
+          orientation === 'ltr' ? 'lg:order-1' : 'lg:order-2'
+        )}
+      >
         <a href={href} target="_blank" className="text-3xl font-semibold">
           <AnimatedUnderline underlineSize="md">{title}</AnimatedUnderline>
         </a>
@@ -33,7 +38,7 @@ export const Project = ({ title, description, href, image, labels, orientation }
           target="_blank"
           className={cn(
             buttonVariants({
-              className: 'mt-auto w-fit',
+              className: 'mt-8 w-fit lg:mt-auto',
             })
           )}
         >
@@ -46,8 +51,8 @@ export const Project = ({ title, description, href, image, labels, orientation }
         height={1726}
         alt=""
         className={cn(
-          'w-full max-w-[560px] rounded-xl transition-transform duration-500 group-hover:scale-[1.03]',
-          orientation === 'ltr' ? 'order-2' : 'order-1'
+          'h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.03] lg:w-1/2',
+          orientation === 'ltr' ? 'lg:order-2' : 'lg:order-1'
         )}
       />
     </div>

@@ -22,11 +22,15 @@ export default function Home() {
     <main>
       <MaxWidthWrapper>
         {/* about me section */}
-        <section data-section id="about" className="flex items-center justify-between gap-16">
-          <div className="flex w-1/2 flex-col justify-between">
+        <section
+          data-section
+          id="about"
+          className="mt-20 flex flex-col items-start justify-between gap-16 sm:mt-0 lg:flex-row lg:items-center"
+        >
+          <div className="flex flex-col justify-between lg:w-1/2">
             <SectionIndicator isActive={activeSection === 'about'}>ABOUT</SectionIndicator>
-            <span className="text-6xl font-bold text-primary">Aditya Kumar</span>
-            <p className="mt-4 text-4xl font-semibold">Full Stack Web Developer</p>
+            <span className="text-3xl font-bold text-primary sm:text-6xl">Aditya Kumar</span>
+            <p className="mt-4 text-2xl font-semibold sm:text-4xl">Full Stack Web Developer</p>
             <p className="mt-8 text-pretty text-lg text-foreground/70">
               Full-stack web developer with expertise in UI/UX design. Skilled in crafting visually
               stunning and cohesive interfaces to create engaging user experiences.
@@ -48,11 +52,11 @@ export default function Home() {
               </SocialLink>
             </div>
           </div>
-          <div className="size-96 rounded-lg bg-muted" />
+          <div className="h-96 w-full rounded-lg bg-muted sm:size-96" />
         </section>
 
         {/* work experience section */}
-        <section data-section id="work" className="mt-56">
+        <section data-section id="work" className="mt-32 sm:mt-56">
           <SectionIndicator isActive={activeSection === 'work'}>WORK</SectionIndicator>
           <div className="grid grid-cols-1 gap-32 pt-6">
             {WORK_PROJECTS.map((project, i) => (
@@ -62,7 +66,7 @@ export default function Home() {
         </section>
 
         {/* projects section */}
-        <section data-section id="projects" className="mt-56">
+        <section data-section id="projects" className="mt-32 sm:mt-56">
           <SectionIndicator isActive={activeSection === 'projects'}>PROJECTS</SectionIndicator>
           <div className="grid grid-cols-1 gap-32 pt-6">
             {PROJECTS.map((project, i) => (
@@ -72,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* technical skills section */}
-        <section data-section id="technical-skills" className="mt-56">
+        <section data-section id="technical-skills" className="mt-32 sm:mt-56">
           <SectionIndicator isActive={activeSection === 'technical-skills'}>
             TECHNICAL SKILLS
           </SectionIndicator>
@@ -99,7 +103,7 @@ export default function Home() {
         </section>
 
         {/* contact me section */}
-        <section data-section id="contact" className="mt-40">
+        <section data-section id="contact" className="mb-20 mt-20 sm:mb-0 sm:mt-40">
           <SectionIndicator isActive={activeSection === 'contact'}>CONTACT</SectionIndicator>
           <div className="flex items-center gap-4">
             <SocialLink href="mailto:aditya132003@gmail.com">

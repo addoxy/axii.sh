@@ -13,8 +13,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedUnderline } from './animated-underline';
 import { MaxWidthWrapper } from './max-width-wrapper';
+import { MobileNavbar } from './mobile-navbar';
 import { Tooltip } from './tooltip';
 import { buttonVariants } from './vendor/button';
+
+export const links = [
+  {
+    name: 'About',
+    href: '/#about',
+  },
+  {
+    name: 'Work',
+    href: '/#work',
+  },
+  {
+    name: 'Projects',
+    href: '/#projects',
+  },
+  {
+    name: 'Skills',
+    href: '/#technical-skills',
+  },
+];
 
 export const Navbar = () => {
   return (
@@ -27,11 +47,12 @@ export const Navbar = () => {
               Aditya Kumar
             </div>
           </Link>
-          <div className="flex items-center gap-6">
-            <NavLink href="/#about">About</NavLink>
-            <NavLink href="/#work">Work</NavLink>
-            <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/#technical-skills">Skills</NavLink>
+          <MobileNavbar />
+          <div className="flex items-center gap-6 max-lg:hidden">
+            {links.map((link, i) => (
+              <NavLink href={link.href}>{link.name}</NavLink>
+            ))}
+
             <a href="/files/Aditya_Kumar_Resume.pdf" download="Aditya_Kumar_Resume.pdf">
               <AnimatedUnderline>Resume</AnimatedUnderline>
             </a>
@@ -52,11 +73,12 @@ export const Navbar = () => {
 interface NavLinkProps {
   children: React.ReactNode;
   href: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const NavLink = ({ children, href }: NavLinkProps) => {
+export const NavLink = ({ children, href, onClick }: NavLinkProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} onClick={onClick}>
       <AnimatedUnderline>{children}</AnimatedUnderline>
     </Link>
   );
