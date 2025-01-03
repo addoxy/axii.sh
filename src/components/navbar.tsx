@@ -38,7 +38,7 @@ export const links = [
 
 export const Navbar = () => {
   return (
-    <nav className="w-full py-5 backdrop-blur-lg transition-all">
+    <nav className="z-10 w-full py-5 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex items-center justify-between">
           <Link href="/">
