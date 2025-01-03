@@ -15,6 +15,7 @@ import { backendSkills, frontendSkills, otherSkills } from '@/data/skills';
 import { WORK_PROJECTS } from '@/data/work-projects';
 import { cn } from '@/utils/utils';
 import { Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -53,7 +54,13 @@ export default function Home() {
               </SocialLink>
             </div>
           </div>
-          <div className="h-96 w-full rounded-lg bg-muted sm:size-96" />
+          <Image
+            src="/me.webp"
+            width={2015}
+            height={2015}
+            alt="me"
+            className="h-96 w-full rounded-lg object-cover sm:size-96"
+          />
         </Section>
 
         {/* work experience section */}
