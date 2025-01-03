@@ -13,7 +13,7 @@ import { links } from './navbar';
 export const MobileNavbar = () => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger className="lg:hidden">
         <MenuIcon className="size-5" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-muted" align="end" sideOffset={4}>
