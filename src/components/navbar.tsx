@@ -95,7 +95,7 @@ const ExtrasMenu = () => {
             <AnimatedUnderline>Extras</AnimatedUnderline>
           </NavigationMenuTrigger>
           <NavigationMenuContent className="border bg-muted">
-            <div className="flex w-64 flex-col px-3 py-2">
+            <div className="flex w-64 flex-col px-3 pb-2.5 pt-2">
               <ExtrasCard />
             </div>
           </NavigationMenuContent>
