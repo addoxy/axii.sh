@@ -45,8 +45,8 @@ export const NotionTemplate = ({ title, description, link, images }: NotionTempl
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="border-muted-foreground" />
-          <CarouselNext className="border-muted-foreground" />
+          <CarouselPrevious className="border-muted-foreground max-md:hidden" />
+          <CarouselNext className="border-muted-foreground max-md:hidden" />
         </Carousel>
       </div>
     </div>
