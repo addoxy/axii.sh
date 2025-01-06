@@ -109,7 +109,6 @@ const ExtrasCard = () => {
   return (
     <Link
       href="/notion-templates"
-      target="_blank"
       className="group flex flex-col rounded-md px-4 py-3 transition-colors hover:bg-background"
     >
       <span className="mb-2 flex gap-1 text-lg font-medium">

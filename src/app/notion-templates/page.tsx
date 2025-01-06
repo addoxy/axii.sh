@@ -1,12 +1,15 @@
 import { MaxWidthWrapper } from '@/components/max-width-wrapper';
-import { TextShimmer } from '@/components/vendor/text-shimmer';
+import { NotionTemplate } from '@/components/notion-template';
+import { NOTION_TEMPLATES } from '@/data/notion-templates';
 
 const NotionTemplatesPage = () => {
   return (
-    <MaxWidthWrapper className="flex items-center justify-center py-52">
-      <TextShimmer duration={2} className="text-2xl font-bold">
-        COMING SOON...
-      </TextShimmer>
+    <MaxWidthWrapper>
+      <div className="mt-8 flex flex-col sm:mt-0">
+        {NOTION_TEMPLATES.map((notionTemplate, i) => (
+          <NotionTemplate key={i} {...notionTemplate} />
+        ))}
+      </div>
     </MaxWidthWrapper>
   );
 };
