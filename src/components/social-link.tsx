@@ -8,8 +8,10 @@ export interface SocialLinkProps {
 }
 
 export const SocialLink = ({ href, children }: SocialLinkProps) => {
+  const tooltipContent = href.startsWith('mailto:') ? href.replace('mailto:', '') : href;
+
   return (
-    <Tooltip content={href}>
+    <Tooltip content={tooltipContent}>
       <a
         href={href}
         target="_blank"
