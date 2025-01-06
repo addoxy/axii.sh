@@ -8,8 +8,8 @@ import {
 import { NotionTemplateProps } from '@/data/notion-templates';
 import { cn } from '@/utils/utils';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
-import Image from 'next/image';
 import { AnimatedUnderline } from './animated-underline';
+import { FullScreenImage } from './full-screen-image';
 import { buttonVariants } from './vendor/button';
 
 export const NotionTemplate = ({ title, description, link, images }: NotionTemplateProps) => {
@@ -27,7 +27,7 @@ export const NotionTemplate = ({ title, description, link, images }: NotionTempl
       <p className="mt-4 text-base/7 text-foreground/70">{description}</p>
       <div className="mt-8">
         <Carousel>
-          <div className="mb-2 flex items-center justify-between">
+          <div className="mb-2 flex items-center justify-between md:hidden">
             <ArrowLeft className="size-3 text-muted-foreground" />
             <span className="text-xs text-muted-foreground">Slide</span>
             <ArrowRight className="size-3 text-muted-foreground" />
@@ -35,7 +35,13 @@ export const NotionTemplate = ({ title, description, link, images }: NotionTempl
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem key={image}>
-                <Image src={image} alt="" width={2880} height={1800} className="rounded-xl" />
+                <FullScreenImage
+                  image={image}
+                  width={2880}
+                  height={1800}
+                  title={title}
+                  description={description}
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
