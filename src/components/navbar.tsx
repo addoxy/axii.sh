@@ -94,10 +94,17 @@ const ExtrasMenu = () => {
           <NavigationMenuTrigger hideChevron className="!bg-transparent px-0 text-base font-normal">
             <AnimatedUnderline>Extras</AnimatedUnderline>
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="border bg-muted">
-            <div className="flex w-64 flex-col px-3 pb-2.5 pt-2">
-              <ExtrasCard />
-            </div>
+          <NavigationMenuContent className="flex border bg-muted p-3">
+            <ExtrasCard
+              href="/notion-templates"
+              title="Notion Templates"
+              description="Beautiful, user-friendly Notion templates designed to simplify organization and boost productivity."
+            />
+            <ExtrasCard
+              href="https://blog.byteferno.tech/"
+              title="ByteFerno Blog"
+              description="Comprehensive, easy-to-follow tutorials and articles on programming, technology, and life."
+            />
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -105,20 +112,24 @@ const ExtrasMenu = () => {
   );
 };
 
-const ExtrasCard = () => {
+interface ExtrasCardProps {
+  href: string;
+  title: string;
+  description: string;
+}
+
+const ExtrasCard = ({ href, title, description }: ExtrasCardProps) => {
   return (
     <Link
-      href="/notion-templates"
-      className="group flex flex-col rounded-md px-4 py-3 transition-colors hover:bg-background"
+      href={href}
+      className="group flex h-full w-64 flex-col rounded-md px-4 pb-3 pt-2 transition-colors hover:bg-background"
+      target="_blank"
     >
       <span className="mb-2 flex gap-1 text-lg font-medium">
-        Notion Templates{' '}
+        {title}{' '}
         <ArrowUpRight className="mt-1 size-4 text-sm transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
       </span>
-      <p className="text-muted-foreground">
-        Beautiful, user-friendly Notion templates designed to simplify organization and boost
-        productivity.
-      </p>
+      <p className="text-muted-foreground">{description}</p>
     </Link>
   );
 };

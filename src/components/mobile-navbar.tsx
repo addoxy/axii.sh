@@ -61,6 +61,11 @@ export const MobileNavbar = () => {
                   Notion Templates
                 </Link>
               </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="https://blog.byteferno.tech/" className="size-full">
+                  ByteFerno Blog
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
