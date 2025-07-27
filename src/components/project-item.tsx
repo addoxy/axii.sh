@@ -14,7 +14,7 @@ export interface ProjectProps {
 
 export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: ProjectProps) => {
   return (
-    <div className="flex w-full max-w-5xl gap-10 border-x border-b border-dashed px-16 py-14">
+    <div className="flex w-full max-w-5xl gap-10 border-x border-b border-dashed px-16 py-14 last-of-type:border-b-0">
       <div className="flex w-1/2 flex-col">
         <div className="flex items-center gap-4">
           <h3 className="text-xl font-bold text-zinc-700">{title}</h3>
