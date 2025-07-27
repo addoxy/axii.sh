@@ -14,7 +14,10 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <BorderSection side="bottom" className="relative h-[600px] overflow-hidden border-dashed">
+      <BorderSection
+        side="bottom"
+        className="relative h-[480px] overflow-hidden border-dashed sm:h-[600px]"
+      >
         <div className="mx-auto flex h-full w-full max-w-5xl flex-col items-center justify-center border-x border-dashed px-20">
           <GridPattern
             width={30}
@@ -31,12 +34,12 @@ export default function Home() {
                 Available for work
               </AnnouncementTitle>
             </Announcement>
-            <h1 className="text-center text-6xl leading-16 font-[900]">
+            <h1 className="text-center text-2xl font-[900] sm:text-6xl sm:leading-16">
               CRAFTING DELIGHTFUL
               <br />
               WEB EXPERIENCES
             </h1>
-            <p className="mt-10 px-32 text-center">
+            <p className="mt-6 px-4 text-center sm:mt-10 sm:px-32">
               Full-stack web developer passionate about building visually polished, high-performance
               websites that captivate and convert.
             </p>
@@ -71,8 +74,8 @@ export default function Home() {
 
       {/* Projects Section */}
       <div id="projects" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-4xl font-[900]">PROJECTS</h2>
-        <p className="mt-4 text-center">
+        <h2 className="text-center text-2xl font-[900] sm:text-4xl">PROJECTS</h2>
+        <p className="mt-4 px-4 text-center">
           Projects that highlight my skills in building thoughtful, scalable, and polished web
           applications.
         </p>
@@ -86,8 +89,8 @@ export default function Home() {
 
       {/* Articles Section */}
       <div id="articles" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-4xl font-[900]">ARTICLES</h2>
-        <p className="mt-4 text-center">
+        <h2 className="text-center text-2xl font-[900] sm:text-4xl">ARTICLES</h2>
+        <p className="mt-4 px-4 text-center">
           Articles and guides sharing my insights, ideas, and how-tos from experience.
         </p>
       </div>
@@ -105,14 +108,14 @@ export default function Home() {
       {/* Contact Me Section */}
       <div id="contact" className="mx-auto flex max-w-5xl flex-col py-16">
         <div className="relative">
-          <h2 className="relative text-center text-4xl font-[900]">CONTACT ME</h2>
+          <h2 className="relative text-center text-2xl font-[900] sm:text-4xl">CONTACT ME</h2>
         </div>
 
-        <p className="mx-auto mt-4 max-w-2xl text-center">
+        <p className="mx-auto mt-4 max-w-2xl px-4 text-center">
           Let's connect and collaborate! Reach out through any of these platforms.
         </p>
 
-        <div className="mx-auto mt-10 flex items-center gap-6">
+        <div className="mx-auto mt-10 flex items-center gap-4 sm:gap-6">
           <a
             target="_blank"
             href="mailto:aditya132003@gmail.com"

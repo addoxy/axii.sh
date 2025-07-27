@@ -14,8 +14,8 @@ export interface ProjectProps {
 
 export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: ProjectProps) => {
   return (
-    <div className="flex w-full max-w-5xl gap-10 border-x border-b border-dashed px-16 py-14 last-of-type:border-b-0">
-      <div className="flex w-1/2 flex-col">
+    <div className="flex w-full max-w-5xl flex-col gap-10 border-x border-b border-dashed px-8 py-14 last-of-type:border-b-0 sm:px-16 md:flex-row">
+      <div className="flex flex-col md:w-1/2">
         <div className="flex items-center gap-4">
           <h3 className="text-xl font-bold">{title}</h3>
           {inProgress && (
@@ -39,7 +39,7 @@ export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: 
           <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
-      <div className="bg-muted ring-muted-foreground/10 dark:ring-muted-foreground/30 aspect-video w-1/2 rounded-3xl p-2 shadow-lg ring-1 backdrop-blur-md">
+      <div className="bg-muted ring-muted-foreground/10 dark:ring-muted-foreground/30 rounded-3xl p-2 shadow-lg ring-1 backdrop-blur-md md:w-1/2">
         <Image
           src={imageUrl}
           width={1920}

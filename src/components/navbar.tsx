@@ -1,9 +1,10 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
+import { Menu, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from './vendor/button';
 
 interface NavItemProps {
   label: string;
@@ -44,13 +45,13 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-background sticky top-0 z-20 border-b border-dashed py-3">
+    <nav className="bg-background sticky top-0 z-20 border-b border-dashed px-4 py-3">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" width={32} height={32} alt="logo" className="rounded-full" />
           axii.sh
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-2 sm:flex">
           <div className="bg-muted flex items-center gap-1 rounded-full p-1.5">
             {items.map((item) => (
               <NavItem key={item.label} label={item.label} href={item.href} />
@@ -64,6 +65,16 @@ export const Navbar = () => {
               {resolvedTheme === 'light' ? <Sun className="size-4" /> : <Moon className="size-4" />}
             </div>
           </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="flex items-center gap-2 sm:hidden">
+          <button onClick={handleThemeToggle} className="p-1.5">
+            {resolvedTheme === 'light' ? <Sun className="size-4" /> : <Moon className="size-4" />}
+          </button>
+          <Button size="icon" variant="ghost">
+            <Menu className="size-6" />
+          </Button>
         </div>
       </div>
     </nav>
