@@ -35,9 +35,9 @@ export default function Home() {
               </AnnouncementTitle>
             </Announcement>
             <h1 className="text-center text-2xl font-[900] sm:text-6xl sm:leading-16">
-              CRAFTING DELIGHTFUL
+              Crafting Delightful
               <br />
-              WEB EXPERIENCES
+              Web Experiences
             </h1>
             <p className="mt-6 px-4 text-center sm:mt-10 sm:px-32">
               Full-stack web developer passionate about building visually polished, high-performance
@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <div id="projects" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-2xl font-[900] sm:text-4xl">PROJECTS</h2>
+        <h2 className="text-center text-2xl font-extrabold sm:text-4xl">Projects</h2>
         <p className="mt-4 px-4 text-center">
           Projects that highlight my skills in building thoughtful, scalable, and polished web
           applications.
@@ -89,7 +89,7 @@ export default function Home() {
 
       {/* Articles Section */}
       <div id="articles" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-2xl font-[900] sm:text-4xl">ARTICLES</h2>
+        <h2 className="text-center text-2xl font-extrabold sm:text-4xl">Articles</h2>
         <p className="mt-4 px-4 text-center">
           Articles and guides sharing my insights, ideas, and how-tos from experience.
         </p>
@@ -108,7 +108,7 @@ export default function Home() {
       {/* Contact Me Section */}
       <div id="contact" className="mx-auto flex max-w-5xl flex-col py-16">
         <div className="relative">
-          <h2 className="relative text-center text-2xl font-[900] sm:text-4xl">CONTACT ME</h2>
+          <h2 className="relative text-center text-2xl font-extrabold sm:text-4xl">Contact Me</h2>
         </div>
 
         <p className="mx-auto mt-4 max-w-2xl px-4 text-center">
