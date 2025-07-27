@@ -20,12 +20,12 @@ const NavItem = ({ label, href }: NavItemProps) => {
 export const Navbar = () => {
   const items: NavItemProps[] = [
     {
-      label: 'Work',
-      href: '#work',
-    },
-    {
       label: 'Projects',
       href: '#projects',
+    },
+    {
+      label: 'Articles',
+      href: '#articles',
     },
     {
       label: 'Contact',
@@ -34,7 +34,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 border-b border-dashed py-3">
+    <nav className="bg-background sticky top-0 z-20 border-b border-dashed py-3">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
         <Link href="/">
           <Image src="/logo.png" width={32} height={32} alt="logo" className="rounded-full" />

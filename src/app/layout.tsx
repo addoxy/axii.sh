@@ -25,8 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(inter.variable, nunito.variable, 'mx-auto font-sans antialiased')}>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={cn(
+          inter.variable,
+          nunito.variable,
+          'bg-background mx-auto font-sans antialiased'
+        )}
+      >
         <Navbar />
         <main>{children}</main>
       </body>
