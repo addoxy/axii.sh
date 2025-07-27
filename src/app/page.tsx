@@ -34,7 +34,7 @@ export default function Home() {
                 Available for work
               </AnnouncementTitle>
             </Announcement>
-            <h1 className="text-center text-2xl font-[900] sm:text-6xl sm:leading-16">
+            <h1 className="text-center text-3xl font-[900] sm:text-6xl sm:leading-16">
               Crafting Delightful
               <br />
               Web Experiences
