@@ -112,7 +112,7 @@ export default function Home() {
         </div>
 
         <p className="mx-auto mt-4 max-w-2xl px-4 text-center">
-          Let's connect and collaborate! Reach out through any of these platforms.
+          Let&apos;s connect and collaborate! Reach out through any of these platforms.
         </p>
 
         <div className="mx-auto mt-10 flex items-center gap-4 sm:gap-6">
