@@ -24,7 +24,7 @@ export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: 
             </Badge>
           )}
         </div>
-        <p className="mt-3">{description}</p>
+        <p className="text-muted-foreground mt-3">{description}</p>
 
         <a
           href={link}

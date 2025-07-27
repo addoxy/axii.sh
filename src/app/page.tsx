@@ -154,7 +154,7 @@ export default function Home() {
       <div className="w-full border-t border-dashed py-10">
         <div className="mx-auto max-w-5xl">
           <p className="text-center text-sm text-zinc-500">
-            © {new Date().getFullYear()} Aditya Kumar. All rights reserved.
+            © {new Date().getFullYear()} axii.sh. All rights reserved.
           </p>
         </div>
       </div>

@@ -88,7 +88,7 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div className="flex items-center gap-2 sm:hidden">
-          <button onClick={handleThemeToggle} className="p-1.5">
+          <button onClick={handleThemeToggle} className="cursor-pointer p-1.5">
             {resolvedTheme === 'light' ? <Sun className="size-4" /> : <Moon className="size-4" />}
           </button>
           <Button size="icon" variant="ghost" onClick={() => setIsMobileMenuOpen(true)}>
