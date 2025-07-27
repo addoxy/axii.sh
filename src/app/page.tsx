@@ -1,130 +1,163 @@
-'use client';
-
-import { GitHubIcon, LinkedInIcon } from '@/components/icons';
-import { MaxWidthWrapper } from '@/components/max-width-wrapper';
-import { Project } from '@/components/project';
-import { Section } from '@/components/section';
-import { SectionIndicator } from '@/components/section-indicator';
-import { SkillBadge } from '@/components/skill-badge';
-import { SocialLink } from '@/components/social-link';
-import { Tooltip } from '@/components/tooltip';
 import { buttonVariants } from '@/components/vendor/button';
-import { TextEffect } from '@/components/vendor/text-effect';
+import { GridPattern } from '@/components/vendor/grid-pattern';
+import { cn } from '@/lib/utils';
+
+import { ArticleItem } from '@/components/article-item';
+import { BorderSection } from '@/components/border-section';
+import { GithubIcon, GmailIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
+import { ProjectItem } from '@/components/project-item';
+import { Announcement, AnnouncementTitle } from '@/components/vendor/announcement';
+import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
-import { backendSkills, frontendSkills, otherSkills } from '@/data/skills';
-import { WORK_PROJECTS } from '@/data/work-projects';
-import { cn } from '@/utils/utils';
-import { Mail } from 'lucide-react';
-import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main>
-      <MaxWidthWrapper>
-        {/* about me section */}
-        <Section
-          id="about"
-          className="mt-20 flex flex-col items-start justify-between gap-16 sm:mt-0 lg:flex-row lg:items-center"
-        >
-          <div className="flex flex-col justify-between lg:w-1/2">
-            <SectionIndicator>ABOUT</SectionIndicator>
-            <span className="text-3xl font-bold text-primary sm:text-6xl">Aditya Kumar</span>
-            <TextEffect
-              per="char"
-              preset="fade"
-              className="mt-4 text-2xl font-semibold sm:text-4xl"
-            >
-              Full Stack Web Developer
-            </TextEffect>
-            <p className="mt-8 text-pretty text-lg text-foreground/70">
-              Full-stack web developer with expertise in UI/UX design. Skilled in crafting visually
-              stunning and cohesive interfaces to create engaging user experiences.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <Tooltip content="aditya132003@gmail.com">
-                <a href="mailto:aditya132003@gmail.com" className={cn(buttonVariants())}>
-                  Contact me
-                </a>
-              </Tooltip>
-              <SocialLink href="https://github.com/addoxy">
-                <GitHubIcon className="!size-7 text-foreground" />
-              </SocialLink>
-              <SocialLink href="https://www.linkedin.com/in/aditya-kumar-25605b238/">
-                <LinkedInIcon className="!size-7 text-foreground" />
-              </SocialLink>
-            </div>
-          </div>
-          <Image
-            src="/me.webp"
-            width={2015}
-            height={2015}
-            alt="me"
-            className="h-96 w-full rounded-lg object-cover sm:size-96"
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <BorderSection
+        side="bottom"
+        className="relative h-[480px] overflow-hidden border-dashed sm:h-[600px]"
+      >
+        <div className="mx-auto flex h-full w-full max-w-5xl flex-col items-center justify-center border-x border-dashed px-20">
+          <GridPattern
+            width={30}
+            height={30}
+            x={-1}
+            y={-1}
+            strokeDasharray={'4 2'}
+            className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
           />
-        </Section>
-
-        {/* work experience section */}
-        <Section id="work" className="mt-32 sm:mt-56">
-          <SectionIndicator>WORK</SectionIndicator>
-          <div className="grid grid-cols-1 gap-32 pt-6">
-            {WORK_PROJECTS.map((project, i) => (
-              <Project key={i} {...project} orientation={i % 2 === 0 ? 'ltr' : 'rtl'} />
-            ))}
-          </div>
-        </Section>
-
-        {/* projects section */}
-        <Section id="projects" className="mt-32 sm:mt-56">
-          <SectionIndicator>PROJECTS</SectionIndicator>
-          <div className="grid grid-cols-1 gap-32 pt-6">
-            {PROJECTS.map((project, i) => (
-              <Project key={i} {...project} orientation={i % 2 === 0 ? 'ltr' : 'rtl'} />
-            ))}
-          </div>
-        </Section>
-
-        {/* technical skills section */}
-        <Section id="technical-skills" className="mt-32 sm:mt-56">
-          <SectionIndicator>TECHNICAL SKILLS</SectionIndicator>
-          <div className="flex flex-col py-10">
-            <span className="tracking-wider text-muted-foreground">FRONTEND</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {frontendSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
-            </div>
-            <span className="mt-10 tracking-wider text-muted-foreground">BACKEND</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {backendSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
-            </div>
-            <span className="mt-10 tracking-wider text-muted-foreground">OTHERS</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {otherSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
+          <div className="z-10 flex flex-col items-center">
+            <Announcement className="mb-6">
+              <AnnouncementTitle>
+                <div className="mr-2 size-1.5 rounded-full bg-green-500" />
+                Available for work
+              </AnnouncementTitle>
+            </Announcement>
+            <h1 className="text-center text-2xl font-[900] sm:text-6xl sm:leading-16">
+              CRAFTING DELIGHTFUL
+              <br />
+              WEB EXPERIENCES
+            </h1>
+            <p className="mt-6 px-4 text-center sm:mt-10 sm:px-32">
+              Full-stack web developer passionate about building visually polished, high-performance
+              websites that captivate and convert.
+            </p>
+            <div className="mt-10 flex items-center gap-2">
+              <a
+                href="#contact"
+                className={cn(
+                  buttonVariants({
+                    className: 'h-12 px-10',
+                    size: 'lg',
+                  })
+                )}
+              >
+                Contact Me
+              </a>
+              <a
+                href="#projects"
+                className={cn(
+                  buttonVariants({
+                    className: 'h-12 px-10',
+                    size: 'lg',
+                    variant: 'outline',
+                  })
+                )}
+              >
+                View Projects
+              </a>
             </div>
           </div>
-        </Section>
+        </div>
+      </BorderSection>
 
-        {/* contact me section */}
-        <section id="contact" className="mb-20 mt-20 sm:mb-0 sm:mt-40">
-          <SectionIndicator>CONTACT</SectionIndicator>
-          <div className="flex items-center gap-4">
-            <SocialLink href="mailto:aditya132003@gmail.com">
-              <Mail className="!size-7 text-foreground" />
-            </SocialLink>
-            <SocialLink href="https://github.com/addoxy">
-              <GitHubIcon className="!size-7 text-foreground" />
-            </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/aditya-kumar-25605b238/">
-              <LinkedInIcon className="!size-7 text-foreground" />
-            </SocialLink>
-          </div>
-          <p className="mt-8 text-muted-foreground">© 2024 Addoxy. All rights reserved.</p>
-        </section>
-      </MaxWidthWrapper>
-    </main>
+      {/* Projects Section */}
+      <div id="projects" className="mx-auto flex max-w-5xl flex-col py-14">
+        <h2 className="text-center text-2xl font-[900] sm:text-4xl">PROJECTS</h2>
+        <p className="mt-4 px-4 text-center">
+          Projects that highlight my skills in building thoughtful, scalable, and polished web
+          applications.
+        </p>
+      </div>
+
+      <BorderSection side="all" className="flex flex-col">
+        {PROJECTS.map((project) => (
+          <ProjectItem key={project.title} {...project} />
+        ))}
+      </BorderSection>
+
+      {/* Articles Section */}
+      <div id="articles" className="mx-auto flex max-w-5xl flex-col py-14">
+        <h2 className="text-center text-2xl font-[900] sm:text-4xl">ARTICLES</h2>
+        <p className="mt-4 px-4 text-center">
+          Articles and guides sharing my insights, ideas, and how-tos from experience.
+        </p>
+      </div>
+
+      <BorderSection side="all" className="flex flex-col">
+        <div
+          className={cn('mx-auto grid max-w-5xl grid-cols-2', ARTICLES.length < 2 && 'grid-cols-1')}
+        >
+          {ARTICLES.map((article) => (
+            <ArticleItem key={article.title} {...article} />
+          ))}
+        </div>
+      </BorderSection>
+
+      {/* Contact Me Section */}
+      <div id="contact" className="mx-auto flex max-w-5xl flex-col py-16">
+        <div className="relative">
+          <h2 className="relative text-center text-2xl font-[900] sm:text-4xl">CONTACT ME</h2>
+        </div>
+
+        <p className="mx-auto mt-4 max-w-2xl px-4 text-center">
+          Let&apos;s connect and collaborate! Reach out through any of these platforms.
+        </p>
+
+        <div className="mx-auto mt-10 flex items-center gap-4 sm:gap-6">
+          <a
+            target="_blank"
+            href="mailto:aditya132003@gmail.com"
+            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-red-50 to-red-100 p-4 transition-all duration-600 hover:scale-110 hover:from-red-500 hover:to-red-600 hover:shadow-lg"
+          >
+            <GmailIcon className="size-8 text-white transition-colors duration-300" />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://x.com/axiidotsh"
+            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-zinc-700 to-zinc-800 p-4 transition-all duration-600 hover:scale-110 hover:from-zinc-800 hover:to-zinc-900 hover:shadow-lg"
+          >
+            <TwitterIcon className="size-8 text-white transition-colors duration-300" />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/aditya-kumar-25605b238/"
+            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-4 transition-all duration-600 hover:scale-110 hover:from-blue-500 hover:to-blue-300 hover:shadow-lg"
+          >
+            <LinkedinIcon className="size-8 transition-colors duration-300" />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://github.com/addoxy"
+            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 transition-all duration-600 hover:scale-110 hover:from-gray-700 hover:to-gray-800 hover:shadow-lg"
+          >
+            <GithubIcon className="size-8 text-white" />
+          </a>
+        </div>
+      </div>
+
+      {/* Footer Section */}
+      <div className="w-full border-t border-dashed py-10">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-center text-sm text-zinc-500">
+            © {new Date().getFullYear()} Aditya Kumar. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
