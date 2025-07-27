@@ -17,9 +17,9 @@ export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: 
     <div className="flex w-full max-w-5xl gap-10 border-x border-b border-dashed px-16 py-14 last-of-type:border-b-0">
       <div className="flex w-1/2 flex-col">
         <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold text-zinc-700">{title}</h3>
+          <h3 className="text-xl font-bold">{title}</h3>
           {inProgress && (
-            <Badge className="border-yellow-500/50 bg-yellow-500/50 text-yellow-700">
+            <Badge className="border-yellow-500/50 bg-yellow-500/50 text-yellow-700 dark:text-yellow-300">
               Currently building
             </Badge>
           )}
@@ -39,7 +39,7 @@ export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: 
           <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
-      <div className="aspect-video w-1/2 rounded-3xl bg-zinc-100 p-2 shadow-lg ring-1 ring-zinc-200/50 backdrop-blur-md">
+      <div className="bg-muted ring-muted-foreground/10 dark:ring-muted-foreground/30 aspect-video w-1/2 rounded-3xl p-2 shadow-lg ring-1 backdrop-blur-md">
         <Image
           src={imageUrl}
           width={1920}

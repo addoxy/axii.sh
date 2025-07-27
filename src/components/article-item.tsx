@@ -10,9 +10,9 @@ export interface ArticleItemProps {
 
 export const ArticleItem = ({ title, description, link }: ArticleItemProps) => {
   return (
-    <div className="flex flex-col gap-4 border border-t-0 border-dashed p-6 transition-colors duration-300 even:border-l-0 last-of-type:border-b-0 hover:bg-zinc-50">
-      <h3 className="text-lg font-semibold text-zinc-800">{title}</h3>
-      <p className="line-clamp-3 text-sm text-zinc-600">{description}</p>
+    <div className="flex flex-col gap-4 border border-t-0 border-dashed p-6 transition-colors duration-300 even:border-l-0 last-of-type:border-b-0">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="line-clamp-3 text-sm">{description}</p>
       <a
         href={link}
         target="_blank"

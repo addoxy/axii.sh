@@ -31,7 +31,7 @@ export default function Home() {
                 Available for work
               </AnnouncementTitle>
             </Announcement>
-            <h1 className="text-center text-6xl leading-16 font-[900] text-zinc-800">
+            <h1 className="text-center text-6xl leading-16 font-[900]">
               CRAFTING DELIGHTFUL
               <br />
               WEB EXPERIENCES
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <div id="projects" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-4xl font-[900] text-zinc-800">PROJECTS</h2>
+        <h2 className="text-center text-4xl font-[900]">PROJECTS</h2>
         <p className="mt-4 text-center">
           Projects that highlight my skills in building thoughtful, scalable, and polished web
           applications.
@@ -86,7 +86,7 @@ export default function Home() {
 
       {/* Articles Section */}
       <div id="articles" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-4xl font-[900] text-zinc-800">ARTICLES</h2>
+        <h2 className="text-center text-4xl font-[900]">ARTICLES</h2>
         <p className="mt-4 text-center">
           Articles and guides sharing my insights, ideas, and how-tos from experience.
         </p>
@@ -105,7 +105,7 @@ export default function Home() {
       {/* Contact Me Section */}
       <div id="contact" className="mx-auto flex max-w-5xl flex-col py-16">
         <div className="relative">
-          <h2 className="relative text-center text-4xl font-[900] text-zinc-800">CONTACT ME</h2>
+          <h2 className="relative text-center text-4xl font-[900]">CONTACT ME</h2>
         </div>
 
         <p className="mx-auto mt-4 max-w-2xl text-center">
