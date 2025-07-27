@@ -1,130 +1,103 @@
-'use client';
-
-import { GitHubIcon, LinkedInIcon } from '@/components/icons';
-import { MaxWidthWrapper } from '@/components/max-width-wrapper';
-import { Project } from '@/components/project';
-import { Section } from '@/components/section';
-import { SectionIndicator } from '@/components/section-indicator';
-import { SkillBadge } from '@/components/skill-badge';
-import { SocialLink } from '@/components/social-link';
-import { Tooltip } from '@/components/tooltip';
-import { buttonVariants } from '@/components/vendor/button';
-import { TextEffect } from '@/components/vendor/text-effect';
-import { PROJECTS } from '@/data/projects';
-import { backendSkills, frontendSkills, otherSkills } from '@/data/skills';
-import { WORK_PROJECTS } from '@/data/work-projects';
-import { cn } from '@/utils/utils';
-import { Mail } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <MaxWidthWrapper>
-        {/* about me section */}
-        <Section
-          id="about"
-          className="mt-20 flex flex-col items-start justify-between gap-16 sm:mt-0 lg:flex-row lg:items-center"
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
+          <li className="mb-2 tracking-[-.01em]">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+              src/app/page.tsx
+            </code>
+            .
+          </li>
+          <li className="tracking-[-.01em]">
+            Save and see your changes instantly.
+          </li>
+        </ol>
+
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
+        </div>
+      </main>
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div className="flex flex-col justify-between lg:w-1/2">
-            <SectionIndicator>ABOUT</SectionIndicator>
-            <span className="text-3xl font-bold text-primary sm:text-6xl">Aditya Kumar</span>
-            <TextEffect
-              per="char"
-              preset="fade"
-              className="mt-4 text-2xl font-semibold sm:text-4xl"
-            >
-              Full Stack Web Developer
-            </TextEffect>
-            <p className="mt-8 text-pretty text-lg text-foreground/70">
-              Full-stack web developer with expertise in UI/UX design. Skilled in crafting visually
-              stunning and cohesive interfaces to create engaging user experiences.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <Tooltip content="aditya132003@gmail.com">
-                <a href="mailto:aditya132003@gmail.com" className={cn(buttonVariants())}>
-                  Contact me
-                </a>
-              </Tooltip>
-              <SocialLink href="https://github.com/addoxy">
-                <GitHubIcon className="!size-7 text-foreground" />
-              </SocialLink>
-              <SocialLink href="https://www.linkedin.com/in/aditya-kumar-25605b238/">
-                <LinkedInIcon className="!size-7 text-foreground" />
-              </SocialLink>
-            </div>
-          </div>
           <Image
-            src="/me.webp"
-            width={2015}
-            height={2015}
-            alt="me"
-            className="h-96 w-full rounded-lg object-cover sm:size-96"
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
           />
-        </Section>
-
-        {/* work experience section */}
-        <Section id="work" className="mt-32 sm:mt-56">
-          <SectionIndicator>WORK</SectionIndicator>
-          <div className="grid grid-cols-1 gap-32 pt-6">
-            {WORK_PROJECTS.map((project, i) => (
-              <Project key={i} {...project} orientation={i % 2 === 0 ? 'ltr' : 'rtl'} />
-            ))}
-          </div>
-        </Section>
-
-        {/* projects section */}
-        <Section id="projects" className="mt-32 sm:mt-56">
-          <SectionIndicator>PROJECTS</SectionIndicator>
-          <div className="grid grid-cols-1 gap-32 pt-6">
-            {PROJECTS.map((project, i) => (
-              <Project key={i} {...project} orientation={i % 2 === 0 ? 'ltr' : 'rtl'} />
-            ))}
-          </div>
-        </Section>
-
-        {/* technical skills section */}
-        <Section id="technical-skills" className="mt-32 sm:mt-56">
-          <SectionIndicator>TECHNICAL SKILLS</SectionIndicator>
-          <div className="flex flex-col py-10">
-            <span className="tracking-wider text-muted-foreground">FRONTEND</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {frontendSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
-            </div>
-            <span className="mt-10 tracking-wider text-muted-foreground">BACKEND</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {backendSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
-            </div>
-            <span className="mt-10 tracking-wider text-muted-foreground">OTHERS</span>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {otherSkills.map((skill, i) => (
-                <SkillBadge key={i} name={skill.name} icon={skill.icon} />
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* contact me section */}
-        <section id="contact" className="mb-20 mt-20 sm:mb-0 sm:mt-40">
-          <SectionIndicator>CONTACT</SectionIndicator>
-          <div className="flex items-center gap-4">
-            <SocialLink href="mailto:aditya132003@gmail.com">
-              <Mail className="!size-7 text-foreground" />
-            </SocialLink>
-            <SocialLink href="https://github.com/addoxy">
-              <GitHubIcon className="!size-7 text-foreground" />
-            </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/aditya-kumar-25605b238/">
-              <LinkedInIcon className="!size-7 text-foreground" />
-            </SocialLink>
-          </div>
-          <p className="mt-8 text-muted-foreground">© 2024 Addoxy. All rights reserved.</p>
-        </section>
-      </MaxWidthWrapper>
-    </main>
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
   );
 }
