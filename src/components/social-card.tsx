@@ -22,7 +22,7 @@ export const SocialCard = ({ href, icon, className }: SocialCardProps) => {
         className: 'rounded-sm',
       })}
     >
-      <Icon className={cn('text-muted-foreground size-5', className)} />
+      <Icon className={cn('dark:text-muted-foreground text-foreground/70 size-5', className)} />
     </a>
   );
 };
