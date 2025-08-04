@@ -20,7 +20,7 @@ export const PROJECTS: ProjectProps[] = [
     description:
       'Ordinate helps you generate structured project ideas with AI. Start from scratch or refine your own input as it assigns a topic, difficulty, title and description to each idea.',
     imageUrl: '/projects/ordinate.png',
-    link: 'https://ordinate.byteferno.tech/',
+    link: 'https://ordinate.axii.xyz/',
     inProgress: true,
   },
   {
@@ -28,6 +28,6 @@ export const PROJECTS: ProjectProps[] = [
     description:
       'Flow is a web app that boosts productivity with a customizable timer, task manager, note-taking, focus audio, and local data backup, all wrapped in a personalized, themeable interface.',
     imageUrl: '/projects/flow.png',
-    link: 'https://flow.byteferno.tech/',
+    link: 'https://flow.axii.xyz/',
   },
 ];

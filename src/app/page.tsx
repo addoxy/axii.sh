@@ -189,7 +189,7 @@ export default function Home() {
           Blogs sharing my insights, ideas, and how-tos from experience.
         </p>
         <a
-          href="https://blog.byteferno.tech/"
+          href="https://blog.axii.xyz/"
           target="_blank"
           className={buttonVariants({
             variant: 'secondary',
