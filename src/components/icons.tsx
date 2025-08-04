@@ -1,38 +1,19 @@
 import { cn } from '@/lib/utils';
 
-interface IconProps {
+export interface IconProps {
   className?: string;
 }
 
-export const GmailIcon = ({ className }: IconProps) => {
+export const MailIcon = ({ className }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 256 256"
+      viewBox="0 0 24 24"
       className={cn('fill-current', className)}
     >
-      <g fill="none">
-        <rect width={256} height={256} fill="currentColor" rx={60}></rect>
-        <path
-          fill="#4285f4"
-          d="M41.636 203.039h31.818v-77.273L28 91.676v97.727c0 7.545 6.114 13.636 13.636 13.636"
-        ></path>
-        <path
-          fill="#34a853"
-          d="M182.545 203.039h31.819c7.545 0 13.636-6.114 13.636-13.636V91.675l-45.455 34.091"
-        ></path>
-        <path
-          fill="#fbbc04"
-          d="M182.545 66.675v59.091L228 91.676V73.492c0-16.863-19.25-26.477-32.727-16.363"
-        ></path>
-        <path
-          fill="#ea4335"
-          d="M73.455 125.766v-59.09L128 107.583l54.545-40.909v59.091L128 166.675"
-        ></path>
-        <path
-          fill="#c5221f"
-          d="M28 73.493v18.182l45.454 34.091v-59.09L60.727 57.13C47.227 47.016 28 56.63 28 73.493"
-        ></path>
+      <g fill="currentColor">
+        <path d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"></path>
+        <path d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"></path>
       </g>
     </svg>
   );
@@ -46,10 +27,10 @@ export const LinkedinIcon = ({ className }: IconProps) => {
       className={cn('fill-current', className)}
     >
       <g fill="none">
-        <rect width={256} height={256} fill="#fff" rx={60}></rect>
-        <rect width={256} height={256} fill="#0a66c2" rx={60}></rect>
+        <rect width={256} height={256} rx={60}></rect>
+        <rect width={256} height={256} rx={60}></rect>
         <path
-          fill="#fff"
+          fill="currentColor"
           d="M184.715 217.685h29.27a4 4 0 0 0 4-3.999l.015-61.842c0-32.323-6.965-57.168-44.738-57.168c-14.359-.534-27.9 6.868-35.207 19.228a.32.32 0 0 1-.595-.161V101.66a4 4 0 0 0-4-4h-27.777a4 4 0 0 0-4 4v112.02a4 4 0 0 0 4 4h29.268a4 4 0 0 0 4-4v-55.373c0-15.657 2.97-30.82 22.381-30.82c19.135 0 19.383 17.916 19.383 31.834v54.364a4 4 0 0 0 4 4M38 59.628c0 11.864 9.767 21.626 21.632 21.626c11.862-.001 21.623-9.769 21.623-21.631C81.253 47.761 71.491 38 59.628 38C47.762 38 38 47.763 38 59.627m6.959 158.058h29.307a4 4 0 0 0 4-4V101.66a4 4 0 0 0-4-4H44.959a4 4 0 0 0-4 4v112.025a4 4 0 0 0 4 4"
         ></path>
       </g>

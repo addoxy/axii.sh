@@ -10,11 +10,24 @@ export interface ProjectProps {
   imageUrl: string;
   link: string;
   inProgress?: boolean;
+  className?: string;
 }
 
-export const ProjectItem = ({ title, description, imageUrl, link, inProgress }: ProjectProps) => {
+export const ProjectItem = ({
+  title,
+  description,
+  imageUrl,
+  link,
+  inProgress,
+  className,
+}: ProjectProps) => {
   return (
-    <div className="flex w-full max-w-5xl flex-col gap-10 border-x border-b border-dashed px-8 py-14 last-of-type:border-b-0 sm:px-16 md:flex-row">
+    <div
+      className={cn(
+        'flex w-full max-w-5xl flex-col gap-10 border-x border-b border-dashed px-8 py-14 sm:px-16 md:flex-row',
+        className
+      )}
+    >
       <div className="flex flex-col md:w-1/2">
         <div className="flex items-center gap-4">
           <h3 className="text-xl font-bold">{title}</h3>
