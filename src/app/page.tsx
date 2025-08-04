@@ -9,6 +9,7 @@ import { ProjectItem } from '@/components/project-item';
 import { Announcement, AnnouncementTitle } from '@/components/vendor/announcement';
 import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -87,12 +88,24 @@ export default function Home() {
         ))}
       </BorderSection>
 
-      {/* Articles Section */}
-      <div id="articles" className="mx-auto flex max-w-5xl flex-col py-14">
-        <h2 className="text-center text-2xl font-extrabold sm:text-4xl">Articles</h2>
+      {/* Blog Section */}
+      <div id="blog" className="mx-auto flex max-w-5xl flex-col py-14">
+        <h2 className="text-center text-2xl font-extrabold sm:text-4xl">Blogs</h2>
         <p className="mt-4 px-4 text-center">
-          Articles and guides sharing my insights, ideas, and how-tos from experience.
+          Blogs sharing my insights, ideas, and how-tos from experience.
         </p>
+        <a
+          href="https://blog.byteferno.tech/"
+          target="_blank"
+          className={buttonVariants({
+            variant: 'secondary',
+            size: 'sm',
+            className: 'group mx-auto mt-4 w-fit !px-4',
+          })}
+        >
+          Explore more{' '}
+          <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
+        </a>
       </div>
 
       <BorderSection side="all" className="flex flex-col">

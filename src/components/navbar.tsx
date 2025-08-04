@@ -47,8 +47,8 @@ export const Navbar = () => {
       href: '#projects',
     },
     {
-      label: 'Articles',
-      href: '#articles',
+      label: 'Blog',
+      href: '#blog',
     },
     {
       label: 'Contact',
