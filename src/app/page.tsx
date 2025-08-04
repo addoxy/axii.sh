@@ -4,12 +4,24 @@ import { cn } from '@/lib/utils';
 
 import { ArticleItem } from '@/components/article-item';
 import { BorderSection } from '@/components/border-section';
-import { GithubIcon, GmailIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
+import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from '@/components/icons';
 import { ProjectItem } from '@/components/project-item';
+import { SocialCard } from '@/components/social-card';
 import { Announcement, AnnouncementTitle } from '@/components/vendor/announcement';
 import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
 import { ArrowUpRight } from 'lucide-react';
+
+const SocialSection = () => {
+  return (
+    <div className="mx-auto mt-10 flex items-center gap-2">
+      <SocialCard href="mailto:aditya132003@gmail.com" icon={MailIcon} />
+      <SocialCard href="https://x.com/axiidotsh" icon={TwitterIcon} className="size-3" />
+      <SocialCard href="https://www.linkedin.com/in/aditya-kumar-25605b238/" icon={LinkedinIcon} />
+      <SocialCard href="https://github.com/addoxy" icon={GithubIcon} />
+    </div>
+  );
+};
 
 export default function Home() {
   return (
@@ -69,6 +81,7 @@ export default function Home() {
                 View Projects
               </a>
             </div>
+            <SocialSection />
           </div>
         </div>
       </BorderSection>
@@ -123,44 +136,10 @@ export default function Home() {
         <div className="relative">
           <h2 className="relative text-center text-2xl font-extrabold sm:text-4xl">Contact Me</h2>
         </div>
-
         <p className="mx-auto mt-4 max-w-2xl px-4 text-center">
           Let&apos;s connect and collaborate! Reach out through any of these platforms.
         </p>
-
-        <div className="mx-auto mt-10 flex items-center gap-4 sm:gap-6">
-          <a
-            target="_blank"
-            href="mailto:aditya132003@gmail.com"
-            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-red-50 to-red-100 p-4 transition-all duration-600 hover:scale-110 hover:from-red-500 hover:to-red-600 hover:shadow-lg"
-          >
-            <GmailIcon className="size-8 text-white transition-colors duration-300" />
-          </a>
-
-          <a
-            target="_blank"
-            href="https://x.com/axiidotsh"
-            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-zinc-700 to-zinc-800 p-4 transition-all duration-600 hover:scale-110 hover:from-zinc-800 hover:to-zinc-900 hover:shadow-lg"
-          >
-            <TwitterIcon className="size-8 text-white transition-colors duration-300" />
-          </a>
-
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/aditya-kumar-25605b238/"
-            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-4 transition-all duration-600 hover:scale-110 hover:from-blue-500 hover:to-blue-300 hover:shadow-lg"
-          >
-            <LinkedinIcon className="size-8 transition-colors duration-300" />
-          </a>
-
-          <a
-            target="_blank"
-            href="https://github.com/addoxy"
-            className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 transition-all duration-600 hover:scale-110 hover:from-gray-700 hover:to-gray-800 hover:shadow-lg"
-          >
-            <GithubIcon className="size-8 text-white" />
-          </a>
-        </div>
+        <SocialSection />
       </div>
 
       {/* Footer Section */}
