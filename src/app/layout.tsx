@@ -17,7 +17,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.axii.xyz'),
-  title: 'Aditya Kumar | Full Stack Developer - Crafting Delightful Web Experiences',
+  title: 'Axii | Full Stack Developer - Crafting Delightful Web Experiences',
   description:
     'Full-stack web developer passionate about building visually polished, high-performance websites that captivate and convert. Specializing in modern web technologies, scalable applications, and thoughtful user experiences.',
   category: 'technology',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.axii.xyz',
-    title: 'Aditya Kumar | Full Stack Developer',
+    title: 'Axii | Full Stack Developer',
     description:
       'Full-stack web developer passionate about building visually polished, high-performance websites that captivate and convert.',
     siteName: 'Aditya Kumar Portfolio',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aditya Kumar | Full Stack Developer',
+    title: 'Axii | Full Stack Developer',
     description:
       'Full-stack web developer passionate about building visually polished, high-performance websites that captivate and convert.',
     creator: '@axiidotsh',
