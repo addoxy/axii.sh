@@ -91,7 +91,7 @@ export default function Home() {
               <Announcement className="mb-6">
                 <AnnouncementTitle>
                   <div className="mr-2 size-1.5 rounded-full bg-green-500" />
-                  Available for work
+                  Open for work
                 </AnnouncementTitle>
               </Announcement>
             </motion.div>
