@@ -49,7 +49,7 @@ export const ProjectItem = ({
           )}
         >
           Visit Project
-          <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
+          <ArrowUpRight className="group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
       <div className="bg-muted ring-muted-foreground/10 dark:ring-muted-foreground/30 rounded-3xl p-2 shadow-lg ring-1 backdrop-blur-md md:w-1/2">
