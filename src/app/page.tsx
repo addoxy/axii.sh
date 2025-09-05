@@ -1,14 +1,16 @@
+'use client';
+
 import { ArticleItem } from '@/components/article-item';
 import { BorderSection } from '@/components/border-section';
 import { GithubIcon, MailIcon, TwitterIcon } from '@/components/icons';
 import { ProjectItem } from '@/components/project-item';
 import { SocialCard } from '@/components/social-card';
 import { Announcement, AnnouncementTitle } from '@/components/vendor/announcement';
-import { buttonVariants } from '@/components/vendor/button';
+import { Button, buttonVariants } from '@/components/vendor/button';
 import { GridPattern } from '@/components/vendor/grid-pattern';
 import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
-import { cn } from '@/lib/utils';
+import { cn, scrollToId } from '@/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 
 const SocialSection = () => {
@@ -71,17 +73,18 @@ export default function Home() {
               websites that captivate and convert.
             </p>
             <div className="mt-10 flex items-center gap-2">
-              <a
-                href="#projects"
-                className={cn(
-                  buttonVariants({
-                    className: 'h-12 px-10',
-                    size: 'lg',
+              <Button
+                className="h-12 px-10"
+                size="lg"
+                onClick={() =>
+                  scrollToId({
+                    id: 'projects',
+                    offset: -100,
                   })
-                )}
+                }
               >
                 View My Projects
-              </a>
+              </Button>
             </div>
             <SocialSection />
           </div>
