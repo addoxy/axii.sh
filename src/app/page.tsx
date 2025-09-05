@@ -14,16 +14,12 @@ import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
 import { ArrowUpRight } from 'lucide-react';
 
-
 const SocialSection = () => {
   return (
     <div className="mx-auto mt-10 flex items-center gap-2">
       <SocialCard href="mailto:aditya132003@gmail.com" icon={MailIcon} />
       <SocialCard href="https://x.com/axiidotsh" icon={TwitterIcon} className="size-3" />
-      <SocialCard
-        href="https://www.linkedin.com/in/aditya-kumar-25605b238/"
-        icon={LinkedinIcon}
-      />
+      <SocialCard href="https://www.linkedin.com/in/aditya-kumar-25605b238/" icon={LinkedinIcon} />
       <SocialCard href="https://github.com/addoxy" icon={GithubIcon} />
     </div>
   );
@@ -44,9 +40,7 @@ export default function Home() {
             x={-1}
             y={-1}
             strokeDasharray={'4 2'}
-            className={cn(
-              '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]'
-            )}
+            className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
           />
           <div className="z-10 flex flex-col items-center">
             <Announcement className="mb-6">
@@ -128,13 +122,15 @@ export default function Home() {
             className: 'group mx-auto mt-4 w-fit !px-4',
           })}
         >
-          Explore more{' '}
-          <ArrowUpRight className="group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
+          Explore more
+          <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
 
       <BorderSection side="all" className="flex flex-col">
-        <div className={cn('mx-auto grid max-w-5xl grid-cols-2', ARTICLES.length < 2 && 'grid-cols-1')}>
+        <div
+          className={cn('mx-auto grid max-w-5xl grid-cols-2', ARTICLES.length < 2 && 'grid-cols-1')}
+        >
           {ARTICLES.map((article) => (
             <ArticleItem key={article.title} {...article} />
           ))}
