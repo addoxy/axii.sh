@@ -1,26 +1,38 @@
-'use client';
-
-import { buttonVariants } from '@/components/vendor/button';
-import { GridPattern } from '@/components/vendor/grid-pattern';
-import { cn } from '@/lib/utils';
-
 import { ArticleItem } from '@/components/article-item';
 import { BorderSection } from '@/components/border-section';
-import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from '@/components/icons';
+import { GithubIcon, MailIcon, TwitterIcon } from '@/components/icons';
 import { ProjectItem } from '@/components/project-item';
 import { SocialCard } from '@/components/social-card';
 import { Announcement, AnnouncementTitle } from '@/components/vendor/announcement';
+import { buttonVariants } from '@/components/vendor/button';
+import { GridPattern } from '@/components/vendor/grid-pattern';
 import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
+import { cn } from '@/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 
 const SocialSection = () => {
   return (
     <div className="mx-auto mt-10 flex items-center gap-2">
-      <SocialCard href="mailto:aditya132003@gmail.com" icon={MailIcon} />
-      <SocialCard href="https://x.com/axiidotsh" icon={TwitterIcon} className="size-3" />
-      <SocialCard href="https://www.linkedin.com/in/aditya-kumar-25605b238/" icon={LinkedinIcon} />
-      <SocialCard href="https://github.com/addoxy" icon={GithubIcon} />
+      <SocialCard
+        href="mailto:aditya132003@gmail.com"
+        icon={MailIcon}
+        content="Get in touch"
+        caption="aditya132003@gmail.com"
+      />
+      <SocialCard
+        href="https://x.com/axiidotsh"
+        icon={TwitterIcon}
+        className="size-3"
+        content="Follow on X"
+        caption="@axii.sh"
+      />
+      <SocialCard
+        href="https://github.com/addoxy"
+        icon={GithubIcon}
+        content="View my GitHub"
+        caption="github.com/axiidotsh"
+      />
     </div>
   );
 };
@@ -60,27 +72,15 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center gap-2">
               <a
-                href="#contact"
-                className={cn(
-                  buttonVariants({
-                    className: 'h-12 px-10',
-                    size: 'lg',
-                  })
-                )}
-              >
-                Contact Me
-              </a>
-              <a
                 href="#projects"
                 className={cn(
                   buttonVariants({
                     className: 'h-12 px-10',
                     size: 'lg',
-                    variant: 'outline',
                   })
                 )}
               >
-                View Projects
+                View My Projects
               </a>
             </div>
             <SocialSection />
