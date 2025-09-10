@@ -52,15 +52,15 @@ export const ProjectItem = ({
           <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
-      <div className="bg-muted min-h-64 rounded-2xl border p-2 shadow-lg backdrop-blur-md md:w-1/2">
-        <div className="skeleton z-0 h-full w-full overflow-hidden rounded-lg border">
+      <div className="bg-muted group hover:bg-foreground/10 dark:hover:bg-foreground/15 h-72 rounded-2xl border p-2 shadow-lg backdrop-blur-md transition-colors duration-500 md:w-1/2">
+        <div className="skeleton h-full w-full overflow-hidden rounded-lg border">
           <Image
             src={imageUrl}
             width={1920}
             height={1080}
             alt={title + ' image'}
             priority
-            className="relative z-50 h-full w-full object-cover object-top"
+            className="relative z-50 h-full w-full object-cover object-top transition-all duration-500 group-hover:translate-y-1.5 group-hover:scale-105"
           />
         </div>
       </div>

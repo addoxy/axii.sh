@@ -30,13 +30,13 @@ export const SocialCard = ({ href, icon, content, caption, className }: SocialCa
           <Icon className={cn('text-foreground/70 size-5', className)} />
         </a>
       </TooltipTrigger>
-      <TooltipContent side="bottom" className="border py-2">
+      <TooltipContent side="bottom" className="dark:border-border border border-black/5 py-2">
         <div className="flex items-center gap-2">
-          <div className="bg-foreground/5 rounded-sm p-2">
+          <div className="dark:bg-foreground/5 bg-foreground/15 rounded-sm p-2">
             <Icon className="text-foreground/70 size-5" />
           </div>
           <div className="flex flex-col gap-0.5">
-            <p className="text-sm">{content}</p>
+            <p className="text-foreground text-sm">{content}</p>
             <p className="text-muted-foreground text-xs">{caption}</p>
           </div>
         </div>
