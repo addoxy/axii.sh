@@ -52,14 +52,17 @@ export const ProjectItem = ({
           <ArrowUpRight className="transition-transform duration-500 group-hover:translate-x-[1px] group-hover:-translate-y-[1px]" />
         </a>
       </div>
-      <div className="bg-muted ring-muted-foreground/10 dark:ring-muted-foreground/30 min-h-64 rounded-3xl p-2 shadow-lg ring-1 backdrop-blur-md md:w-1/2">
-        <Image
-          src={imageUrl}
-          width={1920}
-          height={1080}
-          alt=""
-          className="border-border/50 w-full rounded-2xl border"
-        />
+      <div className="bg-muted min-h-64 rounded-2xl border p-2 shadow-lg backdrop-blur-md md:w-1/2">
+        <div className="skeleton z-0 h-full w-full overflow-hidden rounded-lg border">
+          <Image
+            src={imageUrl}
+            width={1920}
+            height={1080}
+            alt={title + ' image'}
+            priority
+            className="relative z-50 h-full w-full object-cover object-top"
+          />
+        </div>
       </div>
     </div>
   );
