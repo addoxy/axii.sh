@@ -16,11 +16,11 @@ export const PROJECTS: ProjectProps[] = [
     link: 'https://tavlab.iiitd.edu.in/',
   },
   {
-    title: 'Ordinate',
+    title: 'MailYard',
     description:
-      'Ordinate helps you generate structured project ideas with AI. Start from scratch or refine your own input as it assigns a topic, difficulty, title and description to each idea.',
-    imageUrl: '/projects/ordinate.png',
-    link: 'https://ordinate.axii.xyz/',
+      'A visual email builder for creating accessible, responsive emails with a drag-and-drop editor, and exporting them as clean React components using @react-email/components.',
+    imageUrl: '/projects/mailyard.png',
+    link: 'https://mailyard.axii.xyz/',
     inProgress: true,
   },
   {
