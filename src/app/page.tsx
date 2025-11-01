@@ -1,9 +1,10 @@
 'use client';
 
+import { TwitterIcon } from '@/components/icons';
 import { ThemeToggler } from '@/components/theme-toggler';
 import { ARTICLES } from '@/data/articles';
 import { PROJECTS } from '@/data/projects';
-import { ArrowUpRight, GithubIcon, MailIcon, XIcon } from 'lucide-react';
+import { ArrowUpRight, GithubIcon, MailIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -13,13 +14,13 @@ export default function Home() {
   const socialLinks = [
     {
       href: 'mailto:aditya132003@gmail.com',
-      label: 'Email',
+      label: 'Connect via Email',
       icon: MailIcon,
     },
     {
       href: 'https://x.com/axiidotsh',
-      label: 'Twitter',
-      icon: XIcon,
+      label: 'Connect on X',
+      icon: TwitterIcon,
     },
   ];
 
