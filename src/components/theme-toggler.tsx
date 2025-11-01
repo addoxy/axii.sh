@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { Moon, SunDim } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 interface ThemeTogglerProps {
@@ -22,13 +22,15 @@ export const ThemeToggler = ({ className }: ThemeTogglerProps) => {
   if (!theme) return null;
 
   return (
-    <div className={cn('bg-muted rounded-full p-1.5', className)}>
-      <button
-        onClick={handleThemeChange}
-        className="dark:hover:bg-background cursor-pointer rounded-full p-2 transition-colors duration-500 hover:bg-white"
-      >
-        {theme === 'dark' ? <SunDim className="size-4" /> : <Moon className="size-4" />}
-      </button>
-    </div>
+    <button
+      onClick={handleThemeChange}
+      className={cn(
+        'border-border hover:border-foreground hover:text-foreground text-muted-foreground inline-flex cursor-pointer items-center gap-1 border-b pb-0.5 text-sm transition-colors',
+        className
+      )}
+    >
+      {theme === 'dark' ? <Sun className="size-3.5" /> : <Moon className="size-3.5" />}
+      <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+    </button>
   );
 };

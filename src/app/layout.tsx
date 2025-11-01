@@ -1,17 +1,11 @@
-import { Navbar } from '@/components/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter, Nunito } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
   variable: '--font-sans',
-  subsets: ['latin'],
-});
-
-const nunito = Nunito({
-  variable: '--font-heading',
   subsets: ['latin'],
 });
 
@@ -73,13 +67,11 @@ export default function RootLayout({
       <body
         className={cn(
           inter.variable,
-          nunito.variable,
-          'bg-background mx-auto font-sans antialiased'
+          'bg-background font-sans antialiased'
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <main>{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

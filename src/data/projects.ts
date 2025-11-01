@@ -16,6 +16,13 @@ export const PROJECTS: ProjectProps[] = [
     link: 'https://tavlab.iiitd.edu.in/',
   },
   {
+    title: 'axii-stack',
+    description:
+      'A production-ready Next.js starter. Built with modern tools, configured for type-safety, and designed to deploy immediately.',
+    imageUrl: '/projects/axii-stack.png',
+    link: 'https://github.com/addoxy/axii-stack',
+  },
+  {
     title: 'MailYard',
     description:
       'A visual email builder for creating accessible, responsive emails with a drag-and-drop editor, and exporting them as clean React components using @react-email/components.',
