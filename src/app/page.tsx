@@ -26,7 +26,6 @@ export default function Home() {
 
   return (
     <div className="mx-auto min-h-screen max-w-4xl px-6 py-12 md:px-12 md:py-20">
-      {/* Header */}
       <header className="flex items-start justify-between">
         <div>
           <h1 className="text-foreground text-2xl font-light tracking-tight">Aditya Kumar</h1>
@@ -34,7 +33,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/addoxy"
+            href="https://github.com/axiidotsh"
             target="_blank"
             rel="noopener noreferrer"
             className="border-border hover:border-foreground hover:text-foreground text-muted-foreground inline-flex items-center gap-1 border-b pb-0.5 text-sm transition-colors"
@@ -45,27 +44,17 @@ export default function Home() {
           <ThemeToggler />
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="mt-20 md:mt-32">
-        {/* Intro */}
         <div className="border-border border-l pl-6 md:pl-8">
           <p className="text-foreground max-w-2xl text-lg leading-relaxed md:text-xl">
             Full-stack web developer passionate about building visually polished, high-performance
             websites that captivate and convert.
           </p>
-          <div className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1.5 text-sm text-green-600 dark:text-green-400">
-            <div className="size-1.5 rounded-full bg-green-500" />
-            <span>Open for work</span>
-          </div>
         </div>
-
-        {/* Projects */}
         <div className="mt-16 space-y-8 md:mt-24">
           <h2 className="text-foreground border-border border-l pl-6 text-lg font-medium md:pl-8">
             Projects
           </h2>
-
           <div className="border-border border-t">
             {PROJECTS.map((project, index) => (
               <a
@@ -110,13 +99,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* Blog Articles */}
         <div className="mt-16 space-y-8 md:mt-24">
           <h2 className="text-foreground border-border border-l pl-6 text-lg font-medium md:pl-8">
             Blog
           </h2>
-
           <div className="grid grid-cols-1 gap-3">
             {ARTICLES.map((article, index) => (
               <a
@@ -134,13 +120,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* Contact */}
         <div className="mt-20 space-y-8 md:mt-32">
           <h2 className="text-foreground border-border border-l pl-6 text-lg font-medium md:pl-8">
             Get in Touch
           </h2>
-
           <div className="flex flex-col gap-3">
             {socialLinks.map((link) => (
               <a
@@ -157,8 +140,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
       <footer className="text-muted-foreground mt-32 pb-12 text-center font-mono text-xs">
         © {new Date().getFullYear()} axii.sh. All rights reserved.
       </footer>
