@@ -9,10 +9,10 @@ export const PROJECTS: ProjectProps[] = [
     link: 'https://adden.ai',
   },
   {
-    title: 'MailYard',
+    title: 'MailMoss',
     description:
       'A visual email builder for creating accessible, responsive emails with a drag-and-drop editor, and exporting them as clean React components using @react-email/components.',
-    imageUrl: '/projects/mailyard.png',
+    imageUrl: '/projects/mailmoss.png',
     link: 'https://mailmoss.axii.xyz',
     inProgress: true,
   },
